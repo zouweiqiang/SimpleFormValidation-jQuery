@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+}
+
+input {
+  outline: 0;
+}
+
+.format-input {
+  display: inline-block;
+  width: 84%;
+  height: 35px;
+  padding: 0 0 0 3px;
+  border: 1px solid #fff;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 4px solid #007fff;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font: 12px/1.5 'Microsoft YaHei', arial, sans-serif;
+  background: url(../image/bj.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.register-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 450px;
+  height: 415px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.register {
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+.register>ul>li {
+  font-size: 0;
+  margin: 0 0 20px 0;
+}
+
+.register>ul>li label {
+  display: inline-block;
+  width: 16%;
+  font-size: 12px;
+}
+
+.submit-btn {
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: #51a8ff;
+  box-shadow: 1px 1px #AFC4EA,
+    2px 2px #AFC4EA,
+    3px 3px #AFC4EA;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+}
+
+.submit-btn:focus {
+  outline: none;
+  border: 1px solid #f0f3f9;
+}
+
+.submit-btn:active {
+  border: 1px solid #f0f3f9;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px #AFC4EA,
+    2px 2px #AFC4EA;
+
+}

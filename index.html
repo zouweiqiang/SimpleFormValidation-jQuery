@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery数据校验插件开发</title>
+  <link rel="stylesheet" href="css/register.css" />
+  <link rel="stylesheet" href="css/validate.css" />
+</head>
+
+<body>
+  <main>
+    <section>
+      <form method="post" action="result.html" ac id="register">
+        <div class="register-wrap">
+          <div class="register">
+            <ul>
+              <li>
+                <label for="username">用户名：</label>
+                <input type="text" id="username" name="username" tabindex="1" class="format-input" placeholder="请输入用户名"
+                  data-vt-required-msg="用户名不能为空" data-vt-regexp-msg="用户名必须是以字母、数字、下划线组成,且不能以数字开头(6-20位)"
+                  data-vt-required=true data-vt-regexp='^[\w_]\w{5,19}$' autofocus>
+              </li>
+              <li>
+                <label for="pwd">密码：</label>
+                <input type="password" id="pwd" name="password" tabindex="2" class="format-input" placeholder="请输入密码"
+                  data-vt-required=true data-vt-regexp="^[a-zA-Z_][\w_]{5,11}$" data-vt-required-msg="密码不能为空"
+                  data-vt-regexp-msg="密码必须是由字母、数字、下划线组成，且不能以数字开头(6-12位)">
+              </li>
+              <li>
+                <label for="confirmPwd">确认密码：</label>
+                <input type="password" id="confirmPwd" name="password" tabindex="3" class="format-input"
+                  placeholder="请再次输入密码" data-vt-required=true data-vt-required-msg="密码不能为空" data-vt-equals=true
+                  data-vt-equals-msg="两次密码不一致">
+              </li>
+              <li>
+                <label for="phone">手机号：</label>
+                <input type="text" id="phone" name="phone" tabindex="4" class="format-input" placeholder="请输入手机号"
+                  data-vt-required=true data-vt-phone=true data-vt-required-msg="手机号不能为空" data-vt-phone-msg="手机号不合法">
+              </li>
+              <li>
+                <label for="tel">座机：</label>
+                <input type="text" id="tel" name="tel" tabindex="5" class="format-input" placeholder="请输入座机号码"
+                  data-vt-required=true data-vt-tel=true data-vt-required-msg="座机号不能为空" data-vt-tel-msg="座机号不合法">
+              </li>
+              <li>
+                <label for="email">邮箱：</label>
+                <input type="text" id="email" name="email" tabindex="6" class="format-input" placeholder="请输入邮箱地址"
+                  data-vt-required=true data-vt-email=true data-vt-required-msg="邮箱不能为空" data-vt-email-msg="邮箱不合法">
+              </li>
+              <li>
+                <label for="submitBtn"></label>
+                <input type="submit" value="注册" id="submitBtn" tabindex="7" class="format-input submit-btn">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/formValidate.js"></script>
+  <script>
+    $(function () {
+      $('#register').formValidate();
+    });
+  </script>
+</body>
+
+</html>
